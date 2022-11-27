@@ -1,3 +1,5 @@
+test: `npx jest MazeSolver`
+
 ## Developed live on twitch
 [ThePrimeagen](https://twitch.tv/ThePrimeagen)
 
