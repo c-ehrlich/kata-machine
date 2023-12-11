@@ -29,12 +29,12 @@ export default function bfs(
 
     // walk prevs until we get to a -1
     let curr = needle;
-    const out: number[] = [];
+    const out = [curr];
 
     while (prev[curr] !== -1) {
-        out.push(curr);
         curr = prev[curr];
+        out.push(curr);
     }
 
-    return [source].concat(out.reverse());
+    return out.reverse();
 }
