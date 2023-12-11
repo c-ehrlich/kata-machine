@@ -25,6 +25,8 @@ export default function bfs(
         }
     } while (q.length);
 
+    if (prev[needle] === -1) return null;
+
     // walk prevs until we get to a -1
     let curr = needle;
     const out: number[] = [];
@@ -34,7 +36,5 @@ export default function bfs(
         curr = prev[curr];
     }
 
-    if (out.length) return [source].concat(out.reverse());
-
-    return null;
+    return [source].concat(out.reverse());
 }
